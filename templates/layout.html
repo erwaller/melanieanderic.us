@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Melanie and Eric{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="{{ url_for('static', filename='app.css') }}" media="screen" rel="stylesheet" type="text/css">
+  {% block head %}{% endblock %}
+  <!--script type="text/javascript" src="//use.typekit.net/ruc1wxc.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script-->
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+  <!--script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10921494-1']);
+    _gaq.push(['_setDomainName', 'ericwaller.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script-->
+</head>
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>

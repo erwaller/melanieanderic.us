@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ super() }}{% endblock %}
+
+{% block content %}
+	{{ super() }}
+  <style>
+  header img {
+    display: block;
+    margin: 0 auto;
+  }
+  section {
+    text-align: center;
+  }
+  section hr {
+    width: 200px;
+    margin: 30px auto;
+    border-top: 1px solid #1a1919;
+  }
+  section .date,
+  section .venue,
+  section .location {
+    font-family: 'Oswald', sans-serif;
+    color: #1a1919;
+    font-size: 1.25em;
+    line-height: 1.25em
+  }
+  section .date {
+    font-weight: bold;
+  }
+  section .venue {
+    margin-bottom: 5px;
+  }
+
+  @media all and (max-width : 660px) {
+    header img {
+      width: 220px;
+    }
+    section .date,
+    section .venue,
+    section .location {
+      font-size: 1em;
+    }
+    section hr {
+      margin: 20px auto;
+    }
+  }
+  </style>
+  <header>
+    <img src="{{ url_for('static', filename='melanie-and-eric.png') }}">
+  </header>
+  <section>
+    <div class="date">July 12<sup>th</sup>, 2014</div>
+    <hr>
+    <div class="venue">501 Union</div>
+    <div class="location">Brooklyn, NY</div>
+  </section>
+{% endblock %}
