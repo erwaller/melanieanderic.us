@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="/css/the.css" media="screen" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Oswald:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<link href="//api.tiles.mapbox.com/mapbox.js/v1.2.0/mapbox.css" rel="stylesheet">
+<!--[if lte IE 8]>
+  <link href="//api.tiles.mapbox.com/mapbox.js/v1.2.0/mapbox.ie.css" rel="stylesheet">
+<![endif]-->
+<script src="//api.tiles.mapbox.com/mapbox.js/v1.2.0/mapbox.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+
+<style>
+#map, .color-overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.color-overlay {
+  opacity: 0.75;
+  background: #B9DCBF;
+}
+#popup-contents {
+  height: 300px;
+  width: 440px;
+  text-align: center;
+}
+#popup-contents img {
+  padding-top: 30px;
+}
+header img {
+  display: block;
+  margin: 0 auto;
+}
+section {
+  text-align: center;
+}
+section hr {
+  width: 200px;
+  margin: 30px auto;
+  border-top: 1px solid #1a1919;
+}
+section .date,
+section .venue,
+section .location {
+  font-family: 'Oswald', sans-serif;
+  color: #1a1919;
+  font-size: 1.25em;
+  line-height: 1.25em
+}
+section .date {
+  font-weight: bold;
+}
+section .venue {
+  margin-bottom: 5px;
+}
+
+@media all and (max-width : 660px) {
+  header img {
+    width: 220px;
+  }
+  section .date,
+  section .venue,
+  section .location {
+    font-size: 1em;
+  }
+  section hr {
+    margin: 20px auto;
+  }
+}
+</style>
+
+<header>
+  <img src="images/melanie-and-eric.png">
+</header>
+<section>
+  <div class="date">July 12<sup>th</sup>, 2014</div>
+  <hr>
+  <div class="venue">501 Union</div>
+  <div class="location">Brooklyn, NY</div>
+</section>
+
+<!-- <div id="map"></div>
+<div id="overlay"></div>
+<div id="popup-contents"></div> -->
+
+<script type="text/javascript">
+// var loc = new L.LatLng(40.679808, -73.989189);
+// 
+// // We want the whole contraption centered vertically
+// var divHeight = 500,
+//     a = 2;
+// 
+// var map = L.mapbox.map("map", "erwaller.map-vommfdzn", { zoomControl: false })
+//     .setView(loc, 14);
+// 
+// L.marker(loc, {
+//   // icon: L.icon({
+//   //   iconUrl: "http://placekitten.com/100/100",
+//   //   iconSize:     [100, 100],
+//   //   iconAnchor:   [50, 100],
+//   //   popupAnchor:  [0, -105]
+//   // })
+// }).bindPopup(document.getElementById("popup-contents"), {
+//   closeButton: false,
+//   maxWidth: 440
+// }).addTo(map).openPopup();
+// 
+// L.TrollLayer = L.Class.extend({
+// 
+//     map: null,
+// 
+//     initialize: function (options) {
+//       options = L.Util.setOptions(this, options);
+//     },
+// 
+//     addTo: function (map) {
+//         map.addLayer(this);
+//         return this;
+//     },
+// 
+//     onAdd: function (map) {
+//         var that = this;
+// 
+//         this.map = map;
+// 
+//         // if (this.renderer) {
+//         //     // TODO: re-adding behavior
+//         // } else {
+//         //     this._initScene();
+//         //     this._resetScene();
+//         //     this._startRenderLoop();
+//         // }
+// 
+//         this._el = L.DomUtil.create('div', 'color-overlay');
+//         this._el.style.width = this.map._size.x + "px";
+//         this._el.style.height = this.map._size.y + "px";
+//         L.DomUtil.setPosition(this._el, { x: 0, y: 0 });
+//         this.map.getPanes().overlayPane.appendChild(this._el);
+//     },
+// 
+//     onRemove: function (map) {
+//       this.map = null;
+//       map.off({
+//         move: this._move,
+//         viewreset: this._resetScene
+//       }, this);
+//       this.container.parentNode.removeChild(this.container);
+//     }
+// });
+// 
+// new L.TrollLayer().addTo(map);
+</script>
+
+</body>
+</html>
