@@ -15,9 +15,9 @@ app.debug = os.environ.get("APP_ENV") == "dev"
 def redirect_www():
     """Redirect non-www requests to www."""
     urlparts = urlparse(request.url)
-    if urlparts.netloc == 'www.ericwaller.com':
+    if urlparts.netloc == 'www.melanieanderic.us':
         urlparts_list = list(urlparts)
-        urlparts_list[1] = 'ericwaller.com'
+        urlparts_list[1] = 'melanieanderic.us'
         return redirect(urlunparse(urlparts_list), code=301)
 
 @app.route("/")
