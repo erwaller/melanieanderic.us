@@ -6,9 +6,6 @@
   {{ super() }}
   <style>
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, hr, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { 
-    margin: 0;
-    padding: 0;
-    border: 0;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     text-shadow: 0 1px 0 #FFF;
@@ -16,48 +13,45 @@
     font-weight: normal;
     font-size: inherit;
   }
-
-  header img {
+  header img,
+  header .container {
     display: block;
+    margin: 5em auto;
+  }
+  header .container,
+  section .container {
+    max-width: 640px;
     margin: 0 auto;
+  }
+  header .venue {
+    color: #222;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  header .location {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
   }
   section {
     text-align: center;
+    padding: 2.5em;
   }
-  section hr {
-    width: 200px;
-    margin: 30px auto;
-    border-top: 1px solid #1a1919;
+  #the-reception, #wedding-party, #directions {
+    background: #f5f5f5;
   }
-  section .date,
-  section .venue,
-  section .location {
-    font-family: 'Oswald', sans-serif;
-    color: #1a1919;
-    font-size: 1.25em;
-    line-height: 1.25em
-  }
-  section .date {
-    font-weight: bold;
-  }
-  section .venue {
-    margin-bottom: 5px;
-  }
-
-  hr {
-    height: 1px;
-    background-color: #efefef;
-    width: 100%;
-    margin: 2.5em 0;
-  }
-
   h2 {
     font-size: 16px;
     text-transform: uppercase;
     color: #222;
-    margin: 2.5em 0;
+    margin: 0 0 2.5em;
   }
-
   h2 .icon {
     background-image: url('/static/images/iconography.png');
     background-size: 250px 40px;
@@ -67,35 +61,67 @@
     height: 40px;
     margin: 0 auto 8px;
   }
-
   #the-reception h2 .icon {
     background-position: -198px 0px;
     width: 14px;
   }
-
   #our-story h2 .icon {
     background-position: -50px 0px;
     width: 28px;
   }
-
   #registry h2 .icon {
     background-position: -100px 0px;
     width: 34px;
   }
-
   #directions h2 .icon {
     background-position: 0px 0px;
     width: 34px;
   }
-
   section img.large {
     display: block;
     margin: 2.5em auto;
   }
-
   p {
     margin: 1em;
     color: #777;
+  }
+
+  #wedding-party ul {
+    list-style: none;
+  }
+  #wedding-party li {
+    margin: 2em 0;
+  }
+  #wedding-party li img {
+    height: 80px;
+    width: 80px;
+  }
+  #wedding-party li p {
+    font-size: 0.75em;
+    margin: 0.25em 0;
+  }
+  #wedding-party .details {
+    width: 460px;
+  }
+  #wedding-party .bridesmaid {
+    text-align: left;
+  }
+  #wedding-party .bridesmaid img {
+    float: left;
+    margin-right: 10px;
+  }
+  #wedding-party .bridesmaid .details {
+    float: left;
+  }
+  #wedding-party .groomsman {
+    text-align: right;
+  }
+  #wedding-party .groomsman img {
+    float: right;
+    margin-left: 10px;
+  }
+  #wedding-party .groomsman .details {
+    float: right;
   }
 
   @media all and (max-width : 660px) {
@@ -112,65 +138,188 @@
     }
   }
   </style>
+
   <header>
     <img src="{{ url_for('static', filename='images/melanie-and-eric.png') }}">
+    <div class="container">
+      <div class="venue">Liberty Warehouse</div>
+      <div class="location">Brooklyn, NY</div>
+    </div>
   </header>
+
   <section>
-    <div class="date">July 11<sup>th</sup>, 2014</div>
-    <hr>
-    <div class="venue">Liberty Warehouse</div>
-    <div class="location">Brooklyn, NY</div>
   </section>
-  <hr>
+
   <section id="the-reception">
-    <h2>
-      <span>
-        <span class="icon"></span>
-        The Reception
-      </span>
-    </h2>
+    <div class="container">
+      <h2>
+        <span>
+          <span class="icon"></span>
+          The Reception
+        </span>
+      </h2>
+    </div>
   </section>
-  <hr>
+
   <section id="our-story">
-    <h2>
-      <span>
-        <span class="icon"></span>
-        Our Story
-      </span>
-    </h2>
-    <img class="large" src="{{ url_for('static', filename='images/door.jpg') }}">
-    <p>
-      Bicycle rights Carles cray Banksy Pitchfork.
-      Etsy food truck Shoreditch sartorial, brunch retro viral +1 farm-to-table tofu Truffaut wayfarers Schlitz.
-      McSweeney's wayfarers farm-to-table cray 8-bit readymade.
-      Williamsburg iPhone fashion axe locavore lomo vinyl brunch, twee 8-bit lo-fi plaid.
-    </p>
-    <p>
-      Before they sold out narwhal Pitchfork asymmetrical selvage, fap wolf.
-      Bespoke direct trade ethnic High Life fixie.
-      Cred fashion axe readymade banjo flannel, craft beer meh typewriter irony beard artisan letterpress Austin cornhole.
-    </p>
+    <div class="container">
+      <h2>
+        <span>
+          <span class="icon"></span>
+          Our Story
+        </span>
+      </h2>
+      <img class="large" src="{{ url_for('static', filename='images/door.jpg') }}">
+      <p>
+        Bicycle rights Carles cray Banksy Pitchfork.
+        Etsy food truck Shoreditch sartorial, brunch retro viral +1 farm-to-table tofu Truffaut wayfarers Schlitz.
+        McSweeney's wayfarers farm-to-table cray 8-bit readymade.
+        Williamsburg iPhone fashion axe locavore lomo vinyl brunch, twee 8-bit lo-fi plaid.
+      </p>
+      <p>
+        Before they sold out narwhal Pitchfork asymmetrical selvage, fap wolf.
+        Bespoke direct trade ethnic High Life fixie.
+        Cred fashion axe readymade banjo flannel, craft beer meh typewriter irony beard artisan letterpress Austin cornhole.
+      </p>
+    </div>
   </section>
-  <hr>
-  <section>
-    <h2>Wedding Party</h2>
+
+  <section id="wedding-party">
+    <div class="container">
+      <h2>Wedding Party</h2>
+      <ul>
+        <li class="bridesmaid maid-of-honor">
+          <img src="http://images.ak.instagram.com/profiles/profile_8044236_75sq_1374935103.jpg">
+          <div class="details">
+            Allison Schwartz
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="groomsman bestman">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Dylan Waller
+            <p>
+              Squid VHS distillery kale chips, street art synth PBR&amp;B jean shorts tofu single-origin coffee locavore Odd Future twee.
+              Pitchfork keytar actually lo-fi iPhone, bitters before they sold out Vice keffiyeh shabby chic sustainable.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="bridesmaid">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Jillian Waller
+            <p>
+              Swag tote bag messenger bag Shoreditch, actually mustache deep v banh mi asymmetrical hella master cleanse.
+              Master cleanse Tumblr ethical Tonx drinking vinegar.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="groomsman">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Cameron Breen
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="bridesmaid">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Nicole Fleisher
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="groomsman">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Chad Burgess
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="bridesmaid">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Angela Amato
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="groomsman">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Cormack Glass
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="bridesmaid">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Elizabeth Weiss
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li class="groomsman">
+          <img src="http://placehold.it/70x70">
+          <div class="details">
+            Nikos Poulikidis
+            <p>
+              Brunch chia kogi Echo Park typewriter squid.
+              Shoreditch small batch tofu, locavore Helvetica paleo roof party Pitchfork DIY 8-bit hashtag Schlitz stumptown gentrify bitters.
+            </p>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+    </div>
   </section>
-  <hr>
+
   <section id="registry">
-    <h2>
-      <span>
-        <span class="icon"></span>
-        Registry
-      </span>
-    </h2>
+    <div class="container">
+      <h2>
+        <span>
+          <span class="icon"></span>
+          Registry
+        </span>
+      </h2>
+    </div>
   </section>
-  <hr>
+
   <section id="directions">
-    <h2>
-      <span>
-        <span class="icon"></span>
-        Directions
-      </span>
-    </h2>
+    <div class="container">
+      <h2>
+        <span>
+          <span class="icon"></span>
+          Directions
+        </span>
+      </h2>
+    </div>
   </section>
 {% endblock %}
