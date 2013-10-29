@@ -3,8 +3,20 @@
 {% block title %}{{ super() }}{% endblock %}
 
 {% block content %}
-	{{ super() }}
+  {{ super() }}
   <style>
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, hr, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 1px 0 #FFF;
+    line-height: 1.5em;
+    font-weight: normal;
+    font-size: inherit;
+  }
+
   header img {
     display: block;
     margin: 0 auto;
@@ -32,6 +44,60 @@
     margin-bottom: 5px;
   }
 
+  hr {
+    height: 1px;
+    background-color: #efefef;
+    width: 100%;
+    margin: 2.5em 0;
+  }
+
+  h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #222;
+    margin: 2.5em 0;
+  }
+
+  h2 .icon {
+    background-image: url('/static/images/iconography.png');
+    background-size: 250px 40px;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    height: 40px;
+    margin: 0 auto 8px;
+  }
+
+  #the-reception h2 .icon {
+    background-position: -198px 0px;
+    width: 14px;
+  }
+
+  #our-story h2 .icon {
+    background-position: -50px 0px;
+    width: 28px;
+  }
+
+  #registry h2 .icon {
+    background-position: -100px 0px;
+    width: 34px;
+  }
+
+  #directions h2 .icon {
+    background-position: 0px 0px;
+    width: 34px;
+  }
+
+  section img.large {
+    display: block;
+    margin: 2.5em auto;
+  }
+
+  p {
+    margin: 1em;
+    color: #777;
+  }
+
   @media all and (max-width : 660px) {
     header img {
       width: 220px;
@@ -47,12 +113,64 @@
   }
   </style>
   <header>
-    <img src="{{ url_for('static', filename='melanie-and-eric.png') }}">
+    <img src="{{ url_for('static', filename='images/melanie-and-eric.png') }}">
   </header>
   <section>
     <div class="date">July 11<sup>th</sup>, 2014</div>
     <hr>
     <div class="venue">Liberty Warehouse</div>
     <div class="location">Brooklyn, NY</div>
+  </section>
+  <hr>
+  <section id="the-reception">
+    <h2>
+      <span>
+        <span class="icon"></span>
+        The Reception
+      </span>
+    </h2>
+  </section>
+  <hr>
+  <section id="our-story">
+    <h2>
+      <span>
+        <span class="icon"></span>
+        Our Story
+      </span>
+    </h2>
+    <img class="large" src="{{ url_for('static', filename='images/door.jpg') }}">
+    <p>
+      Bicycle rights Carles cray Banksy Pitchfork.
+      Etsy food truck Shoreditch sartorial, brunch retro viral +1 farm-to-table tofu Truffaut wayfarers Schlitz.
+      McSweeney's wayfarers farm-to-table cray 8-bit readymade.
+      Williamsburg iPhone fashion axe locavore lomo vinyl brunch, twee 8-bit lo-fi plaid.
+    </p>
+    <p>
+      Before they sold out narwhal Pitchfork asymmetrical selvage, fap wolf.
+      Bespoke direct trade ethnic High Life fixie.
+      Cred fashion axe readymade banjo flannel, craft beer meh typewriter irony beard artisan letterpress Austin cornhole.
+    </p>
+  </section>
+  <hr>
+  <section>
+    <h2>Wedding Party</h2>
+  </section>
+  <hr>
+  <section id="registry">
+    <h2>
+      <span>
+        <span class="icon"></span>
+        Registry
+      </span>
+    </h2>
+  </section>
+  <hr>
+  <section id="directions">
+    <h2>
+      <span>
+        <span class="icon"></span>
+        Directions
+      </span>
+    </h2>
   </section>
 {% endblock %}
