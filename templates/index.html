@@ -188,7 +188,75 @@
           Our Story
         </span>
       </h2>
-      <img class="large" src="{{ url_for('static', filename='images/door.jpg') }}">
+      <div class="images">
+        <img src="/static/images/door.jpg">
+        <img src="/static/images/mel-eric.jpg">
+        <img src="/static/images/mel-eric-skyline.jpg">
+        <img src="/static/images/mel-cameras.jpg">
+        <img src="/static/images/mel-eric-side.jpg">
+        <img src="/static/images/mel-eric-side2.jpg">
+        <img src="/static/images/mel-eric-cam.jpg">
+      </div>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+      <script>
+      (function () {
+        var images = $(".images img"),
+            controlsHolder = $("<div class='controls'></div>");
+        for (var i = 0; i < images.length; ++i) {
+          controlsHolder
+            .append("<a href='#' data-index='" + i + "'>&nbsp;</a>");
+          if (i !== 0) {
+            images.eq(i).hide();
+          }
+        }
+        $(".images").prepend(controlsHolder);
+
+        var controls = $(".controls a");
+        var current = 0;
+        controls.eq(current)
+          .addClass("current");
+
+        controls.on("click", function (e) {
+          e.preventDefault();
+          var prevCurrent = current;
+          current = $(this).data("index");
+          if (prevCurrent == current) {
+            return;
+          }
+          controls.eq(prevCurrent).removeClass("current");
+          controls.eq(current).addClass("current");
+          images.eq(prevCurrent).hide();
+          images.eq(current).show();
+        });
+      })();
+      </script>
+      <style type="text/css">
+      .images {
+        margin: 2.5em auto;
+      }
+      .images img {
+        display: block;
+        top: 0px;
+        margin: 0 auto;
+      }
+      .controls {
+        margin-bottom: 0.5em;
+      }
+      .controls a {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        background: #ddd;
+        margin: 0 10px;
+        border-radius: 10px;
+      }
+      .controls a:hover {
+        text-decoration: none;
+      }
+      .controls .current {
+        background: #aaa;
+      }
+      </style>
       <p>
         Bicycle rights Carles cray Banksy Pitchfork.
         Etsy food truck Shoreditch sartorial, brunch retro viral +1 farm-to-table tofu Truffaut wayfarers Schlitz.
