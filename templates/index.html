@@ -377,6 +377,22 @@
           images.eq(prevCurrent).hide();
           images.eq(current).show();
         });
+        images.on("click", function (e) {
+          e.preventDefault();
+          var prevCurrent = current;
+          current += 1;
+          if (current >= images.length) {
+            current = 0;
+          }
+          swapImages(prevCurrent, current);
+        });
+
+        function swapImages (prev, curr) {
+          controls.eq(prev).removeClass("current");
+          controls.eq(curr).addClass("current");
+          images.eq(prev).hide();
+          images.eq(curr).show();
+        }
       })();
       </script>
       <style type="text/css">
@@ -387,6 +403,7 @@
         display: block;
         top: 0px;
         margin: 0 auto;
+        cursor: pointer;
       }
       .controls {
         margin-bottom: 0.5em;
