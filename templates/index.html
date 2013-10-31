@@ -43,7 +43,7 @@
   }
   section {
     text-align: center;
-    padding: 2.5em;
+    padding: 2.5em 1em;
   }
   #the-reception, #wedding-party, #directions {
     background: #f5f5f5;
@@ -84,12 +84,24 @@
     background-position: 0px 0px;
     width: 34px;
   }
-  section img.large {
-    display: block;
-    margin: 2.5em auto;
-  }
   p {
     margin: 1em;
+    color: #222;
+    font-size: 1.125em;
+  }
+  strong,
+  strong sup {
+    font-weight: bold;
+  }
+  sup {
+    vertical-align: super;
+    font-size: 0.75em;
+  }
+
+  #the-reception hr {
+    margin: 3em auto;
+    width: 10em;
+  }
   .calendar {
     margin: 0 auto;
   }
@@ -151,6 +163,7 @@
     width: 80px;
   }
   #wedding-party .role {
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.675em;
     text-transform: uppercase;
     color: #777;
@@ -160,6 +173,7 @@
     margin: 0.25em 0;
   }
   #wedding-party .details {
+    font-family: 'Montserrat', sans-serif;
     width: 460px;
   }
   #wedding-party .bridesmaid {
@@ -211,6 +225,9 @@
     }
     #reception .map {
       width: 320px;
+    }
+    p {
+      margin: 1em 0.5em;
     }
   }
   </style>
@@ -327,7 +344,7 @@
         <img src="/static/images/mel-cameras.jpg">
         <img src="/static/images/mel-eric-side.jpg">
         <img src="/static/images/mel-eric-side2.jpg">
-        <img src="/static/images/mel-eric-cam.jpg">
+        <!-- <img src="/static/images/mel-eric-cam.jpg"> -->
       </div>
       <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
       <script>
@@ -540,10 +557,8 @@
   <section id="registry">
     <div class="container">
       <h2>
-        <span>
-          <span class="icon"></span>
-          Registry
-        </span>
+        <span class="icon"></span>
+        Registry
       </h2>
     </div>
   </section>
@@ -551,10 +566,8 @@
   <section id="directions">
     <div class="container">
       <h2>
-        <span>
-          <span class="icon"></span>
-          Directions
-        </span>
+        <span class="icon"></span>
+        Directions
       </h2>
       <a href="https://maps.google.com/maps?daddr=Liberty+Warehouse%4040.676821,-74.0179397&t=m&z=14">
         <img class="map" src="http://maps.googleapis.com/maps/api/staticmap?visual_refresh=true&scale=2&zoom=12&sensor=false&size=640x360&markers=color:blue%7Clabel:S%7C40.676821,-74.0179397">
