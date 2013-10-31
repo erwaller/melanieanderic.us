@@ -586,9 +586,57 @@
         <span class="icon"></span>
         Directions
       </h2>
-      <a href="https://maps.google.com/maps?daddr=Liberty+Warehouse%4040.676821,-74.0179397&t=m&z=14">
-        <img class="map" src="http://maps.googleapis.com/maps/api/staticmap?visual_refresh=true&scale=2&zoom=12&sensor=false&size=640x360&markers=color:blue%7Clabel:S%7C40.676821,-74.0179397">
+      <style type="text/css">
+      #directions h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-align: left;
+      }
+      #directions ol {
+        text-align: left;
+        margin: 1em 0 2em 2em;
+      }
+      #directions .map {
+        margin: 2em 0;
+        display: block;
+      }
+      </style>
+      <a class="map" href="https://maps.google.com/maps?daddr=Liberty+Warehouse%4040.676821,-74.0179397&t=m&z=14">
+        <img src="http://maps.googleapis.com/maps/api/staticmap?visual_refresh=true&scale=2&zoom=12&sensor=false&size=640x360&markers=color:blue%7Clabel:S%7C40.676821,-74.0179397">
       </a>
+      <h3>From Manhattan</h3>
+      <ol>
+        <li>Head southeast on The Brooklyn Bridge.</li>
+        <li>Take the exit toward Bklyn-Qns Expy.</li>
+        <li>Merge onto Cadman Plaza W/Old Fulton St.</li>
+        <li>Continue onto Columbia St.</li>
+        <li>Turn right onto Sackett St.</li>
+        <li>Take the 1st left onto Van Brunt St.</li>
+        <li>Turn right onto Beard St.</li>
+        <li>Entrance will be straight ahead.</li>
+      </ol>
+      <h3>From Brooklyn Battery Tunnel</h3>
+      <ol>
+        <li>Take exit 26 to merge onto Hamilton Ave.</li>
+        <li>Turn right onto Clinton St.</li>
+        <li>Go 4 blocks and turn right onto Lorraine St.</li>
+        <li>Go 5 blocks and turn left onto Dwight St.</li>
+        <li>Go 4 blocks and turn right onto Beard St.</li>
+        <li>Keep going Straight Ahead.</li>
+      </ol>
+      <h3>From Brooklyn or Long Island</h3>
+      <ol>
+        <li>Take Belt Parkway towards Manhattan to Hamilton Avenue (“Last Exit in Brooklyn”).</li>
+        <li>Go straight at exit ramp and make a left on Van Brunt Street.</li>
+        <li>Follow directions at top of page.</li>
+      </ol>
+      <h3>From Long Island Expressway</h3>
+      <ol>
+        <li>Take to Brooklyn Queens Expressway West towards Atlantic Avenue Exit.</li>
+        <li>At light, make left onto Columbia Street.</li>
+        <li>Follow directions at top of page.</li>
+      </ol>
     </div>
   </section>
 {% endblock %}
