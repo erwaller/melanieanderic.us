@@ -50,26 +50,6 @@ strong {
 em {
   font-style: italic
 }
-@media all and (max-width : 660px) {
-	body > header {
-		margin: 45px auto;
-	}
-}
-body > header h1 {
- 	font-size: 42px;
- 	line-height: 54px;
-}
-body > header h1 a {
- 	color: #186CB0;
- 	text-shadow: 0 1px 0 white;
-	text-decoration: none;
-}
-body > header h1 a:hover {
-	text-decoration: none;
-}
-body > header p {
-	margin: 0;
-}
 a {
 	color: #186CB0;
 	text-decoration: none;
@@ -79,25 +59,6 @@ a:hover {
 }
 p {
 	margin: 0 0 1em;
-}
-article {
-  margin-bottom: 60px;
-}
-article header h2 {
-	font-size: 1.25em;
-	margin-bottom: 0.2em;
-}
-article header p {
-	color: #949494;
-	font-size: 0.875em;
-	margin-bottom: 0.25em;
-}
-article .vimeo-video {
-	width: 640px;
-	height: 360px;
-}
-article iframe {
-  display: block;
 }
 @media all and (max-width : 660px) {
 	article .vimeo-video {
