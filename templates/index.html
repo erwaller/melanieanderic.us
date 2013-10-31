@@ -57,7 +57,7 @@
   }
   h2 .icon {
     background-image: url('/static/images/iconography.png');
-    background-size: 250px 40px;
+    background-size: 400px 40px;
     background-repeat: no-repeat;
     display: block;
     position: relative;
@@ -65,12 +65,16 @@
     margin: 0 auto 8px;
   }
   #the-reception h2 .icon {
-    background-position: -198px 0px;
+    background-position: -200px 0px;
     width: 14px;
   }
   #our-story h2 .icon {
     background-position: -50px 0px;
     width: 28px;
+  }
+  #wedding-party h2 .icon {
+    background-position: -250px 0px;
+    width: 50px;
   }
   #registry h2 .icon {
     background-position: -100px 0px;
@@ -86,6 +90,53 @@
   }
   p {
     margin: 1em;
+  .calendar {
+    margin: 0 auto;
+  }
+  .calendar h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom:6px;
+  }
+  .calendar .shadow-wrap {
+    -webkit-b ox-shadow: 0px 10px 35px rgba(50, 50, 50, 0.25);
+    -moz-b ox-shadow:    0px 10px 35px rgba(50, 50, 50, 0.25);
+    box-sha dow:         0px 10px 35px rgba(50, 50, 50, 0.25);
+  }
+  .calendar tbody {
+    background: #fff;
+  }
+  .calendar th {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 4px;
+    font-family: 'Montserrat', sans-serif;
+    color: #777;
+  }
+  .calendar th h3 {
+    color: #222;
+  }
+  .calendar td {
+    font-family: 'helvetica neue';
+    padding: 4px 8px;
+    height: 34px;
+    width: 26px;
+    border: 1px solid #ddd;
+    text-align: right;
+    font-size: 12px;
+  }
+  .calendar .weekend {
+    background: #f5f5f5;
+  }
+  .calendar .wedding-day {
+    background: #6EC1E1;
+    border: 1px #6EC1E1 solid;
+    color: #fff;
+    font-weight: bold;
+  }
+  .calendar .prev-month,
+  .calendar .next-month {
     color: #777;
   }
 
@@ -183,21 +234,88 @@
   <section id="the-reception">
     <div class="container">
       <h2>
-        <span>
-          <span class="icon"></span>
-          The Reception
-        </span>
+        <span class="icon"></span>
+        The Reception
       </h2>
+      <p>
+        Please join us on <strong>July 11<sup>th</sup>, 2014</strong> to celebrate our wedding at <strong>Liberty Warehouse</strong> in Brooklyn, NY.
+        The ceremony begins at <strong class="time">7pm</strong>.
+      </p>
+      <hr>
+      <table class="calendar">
+        <thead>
+          <tr>
+            <th colspan=7>
+              <h3>July 2014</h3>
+            </th>
+          </tr>
+          <tr>
+            <th class="weekend">Su</th>
+            <th>Mo</th>
+            <th>Tu</th>
+            <th>We</th>
+            <th>Th</th>
+            <th>Fr</th>
+            <th class="weekend">Sa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="weekend prev-month">29</td>
+            <td class="prev-month">30</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td class="weekend">5</td>
+          </tr>
+          <tr>
+            <td class="weekend">6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td class="wedding-day">11</td>
+            <td class="weekend">12</td>
+          </tr>
+          <tr>
+            <td class="weekend">13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td class="weekend">19</td>
+          </tr>
+          <tr>
+            <td class="weekend">20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td class="weekend">26</td>
+          </tr>
+          <tr>
+            <td class="weekend">27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td class="next-month">1</td>
+            <td class="weekend next-month">2</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clearfix"></div>
     </div>
   </section>
 
   <section id="our-story">
     <div class="container">
       <h2>
-        <span>
-          <span class="icon"></span>
-          Our Story
-        </span>
+        <span class="icon"></span>
+        Our Story
       </h2>
       <div class="images">
         <img src="/static/images/door.jpg">
@@ -284,7 +402,10 @@
 
   <section id="wedding-party">
     <div class="container">
-      <h2>Wedding Party</h2>
+      <h2>
+        <span class="icon"></span>
+        Wedding Party
+      </h2>
       <ul>
         <li class="bridesmaid maid-of-honor">
           <img src="http://images.ak.instagram.com/profiles/profile_8044236_75sq_1374935103.jpg">
