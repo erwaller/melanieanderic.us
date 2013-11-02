@@ -226,6 +226,10 @@ h2 .icon {
   background: #aaa;
 }
 
+#our-story p {
+  text-align: left;
+}
+
 #wedding-party ul {
   list-style: none;
 }
@@ -242,9 +246,10 @@ h2 .icon {
   text-transform: uppercase;
   color: #777;
 }
-#wedding-party li p {
-  font-size: 0.75em;
+#wedding-party .details p {
+  font-size: 12px;
   margin: 0.25em 0;
+  font-family: verdana, sans-serif;
 }
 #wedding-party .details {
   font-family: 'Montserrat', sans-serif;
@@ -318,5 +323,25 @@ h2 .icon {
   }
   p {
     margin: 1em 0.5em;
+  }
+  #wedding-party .officiant {
+    width: auto;
+  }
+  #wedding-party .bridesmaid img,
+  #wedding-party .groomsman img,
+  #wedding-party .officiant img {
+    float: none;
+    margin: 0 auto 10px;
+    display: block;
+    width: 120px;
+    height: 120px;
+  }
+  #wedding-party .bridesmaid .details,
+  #wedding-party .groomsman .details,
+  #wedding-party .officiant .details {
+    float: none;
+    text-align: center;
+    width: auto;
+    margin: none;
   }
 }
